@@ -1,0 +1,9 @@
+{
+  "name": "imageflowsdk-backend",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "imageflowuploadfunction.js"
+}
