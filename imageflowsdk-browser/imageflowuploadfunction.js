@@ -4,6 +4,9 @@ export const imageflowuploadfunction = async (file, apikey, foldername) => {
   if (foldername === undefined || foldername.trim() === "") {
     foldername = "default";
   }
+  if(!file || !apikey) {
+    throw new Error("File and API key are required for upload");
+  }
   try {
     uploadurl = await fetch(`http://localhost:3000/api/v1/files/uploadfile`, {
       method: "POST",
