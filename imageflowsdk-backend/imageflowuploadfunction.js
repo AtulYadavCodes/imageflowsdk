@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 export const imageflowuploadfunction = async (filepath, apikey, foldername) => {
   let uploadurl;
-  const file=fs.createReadStream(filepath);
+  const file=fs.readFileSync(filepath);
   const filesize=fs.statSync(filepath).size;
   const filename=path.basename(filepath);
   const filetype="application/octet-stream";
