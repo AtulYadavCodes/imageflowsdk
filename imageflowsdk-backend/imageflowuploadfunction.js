@@ -15,7 +15,7 @@ export const imageflowuploadfunction = async (filepath, apikey, foldername) => {
     throw new Error("File and API key are required for upload");
   }
   try {
-    uploadurl = await fetch("http://localhost:3000/api/v1/files/uploadfile", {
+    uploadurl = await fetch("https://www.imageflow.atulyadav.tech/api/v1/files/uploadfile", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -47,7 +47,7 @@ export const imageflowuploadfunction = async (filepath, apikey, foldername) => {
   }
 
   try {
-    const savefile = await fetch(`http://localhost:3000/api/v1/files/uploadfile/${foldername}`, {
+    const savefile = await fetch(`https://www.imageflow.atulyadav.tech/api/v1/files/uploadfile/${foldername}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
